@@ -1,399 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="Amazon.Css">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 1.5rem;
+        }
+        #container{
+            margin-left: 300px;
+            display: flex;
+            justify-self: center;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            height: 70%;
+            border: 3px solid black;
+            background-color: aqua;
+            justify-content: space-evenly;
+            gap: 15px;
+        }
+        #content{
+            margin: 10px;
+            padding: 16px;
+            border: 2px solid blue;
+        }
+        input{
+            padding: 1vw;
+            border: 2px solid beige;
+            border-radius: 2%;
+        }
+        button{
+            width: 60px;
+            border-radius: 20%;
+            border: 2px solid burlywood;
+            background-color: aquamarine;
+        }
+    </style>
 </head>
-
 <body>
-    <header class="navbar">
-        <section class="nav-logo">
-            <a href="#">
-                <div class="logo border "></div>
-            </a>
-        </section>
-        <section class="location border">
-            <p class="para1">Deliver to</p>
-            <div>
-                <i class="fa-solid fa-location-dot"></i>
-                <p class="para2">Pakistan</p>
-            </div>
-        </section>
-        <section class="search">
-            <select class="select">
-                <option>All</option>
-            </select>
-            <input class="input" placeholder="Search Amazon">
-            <div class="icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-        </section>
-        <section class="link border ">
-            <div class="p1">
-                <p><span>Hello,sign in</span></p>
-            </div>
-            <div class="p2">
-                <p>Accounts & Lists</p>
-                <select class="select2"></select>
-            </div>
-        </section>
-        <section class="link border">
-            <div class="p1">
-                <p><span>Returns</span></p>
-            </div>
-            <div class="p2">
-                <p>& Orders</p>
-            </div>
-        </section>
-        <section class="Cart border ">
-            <div class="icon2">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <p class="p3">Cart</p>
-            </div>
-        </section>
-    </header>
-    <main class="r1">
-        <div class="menu border ">
-            <i class="fa-solid fa-bars"></i>
-            <p class="p4">All</p>
-        </div>
-        <div class="box1">
-            <div class="nav-a border ">Today's Deals</div>
-            <div class="nav-b border ">Customer Service</div>
-            <div class="nav-c border ">Registry</div>
-            <div class="nav-d border ">Gifts Craft</div>
-            <div class="nav-e border ">Sell</div>
-        </div>
-    </main>
-    <div class="width">
-        <!-- <article class="d1"> -->
-            <!-- <section class="f2">
-            </section> -->
-            <section class="f1">
-            </section>
-        <!-- </article> -->
+    <div id="container">
+        <div id="content">Result = 0</div>
+        <input id="num1" type="number" placeholder="Enter number 1">
+        <input id="num2" type="number" placeholder="Enter number 2">
+        <button onclick="Add()">+</button>
+        <button onclick="Sub()">-</button>
+        <button onclick="Mul()">*</button>
+        <button onclick="Div()">/</button>
     </div>
-    <article class="shophere ">
-        <section class="b1">
-            <a href="#">
-                <h2>Gaming accessories</h2>
-            </a>
-            <article class="images ">
-                <div class="imgr1">
-                    <img class="img"
-                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Headset_2x._SY232_CB667159060_.jpg">
-                    <img class="img"
-                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Keyboard_2x._SY232_CB667159063_.jpg">
-                </div>
-                <div class="articlename">
-                    <a href="#">
-                        <p class="para4">Headsets</p>
-                    </a>
-                    <a href="#">
-                        <p class="para4">Keyboard</p>
-                    </a>
-                </div>
-                <div class="imgr2">
-                    <img class="img"
-                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Mouse_2x._SY232_CB667159063_.jpg">
-                    <img class="img"
-                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Chair_2x._SY232_CB667159060_.jpg">
-                </div>
-                <div class="articlename">
-                    <a href="#">
-                        <p class="para4">Computer mice</p>
-                    </a>
-                    <a href="#">
-                        <p class="para4">Chairs</p>
-                    </a>
-                </div>
-                <div class="More">
-                    <a href="#">
-                        <p class="para3">See more</p>
-                    </a>
-                </div>
-            </article>
-        </section>
-        <section class="b2">
-            <a href="#">
-                <h2>Top categories in Kitchen appliances</h2>
-            </a>
-            <article class="images ">
-                <div class="imgr1">
-                    <img class="img5" src="https://m.media-amazon.com/images/I/313wAT6Iy2L._SY320_.jpg">
-                </div>
-                <div class="articlename">
-                    <a href="#">
-                        <p class="para4">Cooker</p>
-                    </a>
-                </div>
-                <div class="imgr2">
-                    <img class="img6" src="https://m.media-amazon.com/images/I/21W7-lndINL._SY150_.jpg">
-                    <img class="img6" src="https://m.media-amazon.com/images/I/21B-NkA9p-L._SY150_.jpg">
-                    <img class="img6" src="https://m.media-amazon.com/images/I/217GQ1a2QzL._SY150_.jpg">
-                </div>
-                <div class="articlename">
-                    <a href="#">
-                        <p class="para4">Coffee</p>
-                    </a>
-                    <a href="#">
-                        <p class="para4">Pots and ...</p>
-                    </a>
-                    <a href="#">
-                        <p class="para4">Kettle</p>
-                    </a>
-                </div>
-                <div class="More">
-                    <a href="#">
-                        <p class="para3">Explore all Products in Kitchen</p>
-                    </a>
-                </div>
-            </article>
-        </section>
-        <section class="b3">
-            <a href="#">
-                <h2>Deals in PCs</h2>
-            </a>
-            <article class="images ">
-                <div class="imgr3">
-                    <img class="img7"
-                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_2x_v1._SY608_CB573698005_.jpg">
-                </div>
-                <div class="More">
-                    <a href="#">
-                        <p class="para3">Shop now</p>
-                    </a>
-                </div>
-            </article>
-        </section>
-        <section class="b4">
-            <a href="#">
-                <h2>Shop for your home essentials</h2>
-            </a>
-            <article class="images ">
-                <div class="imgr1">
-                    <img class="img8"
-                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/CleaningTool_2x._SY232_CB563137408_.jpg">
-                    <img class="img8"
-                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeStorage_2x._SY232_CB563137408_.jpg">
-                </div>
-                <div class="articlename">
-                    <a href="#">
-                        <p class="para4">Cleaning Tools</p>
-                    </a>
-                    <a href="#">
-                        <p class="para4">Home Storage</p>
-                    </a>
-                </div>
-                <div class="imgr2">
-                    <img class="img8"
-                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeDecor_2x._SY232_CB563137408_.jpg">
-                    <img class="img8"
-                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/Bedding_2x._SY232_CB563137408_.jpg">
-                </div>
-                <div class="articlename">
-                    <a href="#">
-                        <p class="para4">Home Decor</p>
-                    </a>
-                    <a href="#">
-                        <p class="para4">Bedding</p>
-                    </a>
-                </div>
-                <div class="More">
-                    <a href="#">
-                        <p class="para3">Discover more in Home</p>
-                    </a>
-                </div>
-            </article>
-        </section>
-        <section class="b5">
-            <a href="#">
-                <h2>Shop deals in Fashion</h2>
-            </a>
-            <article class="images ">
-                <div class="imgr1">
-                    <img class="img8"
-                        src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_BOTTOMS_2x._SY232_CB624172947_.jpg">
-                    <img class="img8"
-                        src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_TOPS_2x._SY232_CB623353881_.jpg">
-                </div>
-                <div class="articlename">
-                    <a href="#">
-                        <p class="para4">Jeans under $50</p>
-                    </a>
-                    <a href="#">
-                        <p class="para4">Tops under $25</p>
-                    </a>
-                </div>
-                <div class="imgr2">
-                    <img class="img8"
-                        src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_DRESSES_2x._SY232_CB623353881_.jpg">
-                    <img class="img8"
-                        src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_SHOES_2x._SY232_CB624172947_.jpg">
-                </div>
-                <div class="articlename">
-                    <a href="#">
-                        <p class="para4">Dresses under $30</p>
-                    </a>
-                    <a href="#">
-                        <p class="para4">Shoes under $50</p>
-                    </a>
-                </div>
-                <div class="More">
-                    <a href="#">
-                        <p class="para3">See all deals</p>
-                    </a>
-                </div>
-            </article>
-        </section>
-        <section class="b6">
-            <a href="#">
-                <h2>Small gifts under $20</h2>
-            </a>
-            <article class="images ">
-                <div class="imgr3">
-                    <img class="img7"
-                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_2x_v2._SY608_CB573698005_.jpg">
-                </div>
-                <div class="More">
-                    <a href="#">
-                        <p class="para3">Shop now</p>
-                    </a>
-                </div>
-            </article>
-        </section>
-    </article>
-    <footer class="footer">
-        <section class="nav-footer">
-            <a href="#" style="color:white">
-                <p>Back to Top</p>
-            </a>
-        </section>
-        <article class="col">
-            <section class="nav-col1">
-                <h3>Get to Know Us</h3>
-                <a href="#">
-                    <p class="para5">Careers</p>
-                </a>
-                <a>
-                    <p class="para5">Blog</p>
-                </a>
-                <a href="#">
-                    <p class="para5">About Amazon</p>
-                </a>
-                <a href="#">
-                    <p class="para5">Investor Relations</p>
-                </a>
-                <a href="#">
-                    <p class="para5">Amazon Devices</p>
-                </a>
-                <a href="#">
-                    <p class="para5">Amazon Science</p>
-                </a>
-            </section>
-            <section class="nav-col2">
-                <h3>Make Money with Us</h3>
-                <a href="#">
-                    <p class="para5">Sell Products on Amazon</p>
-                </a>
-                <a href="#">
-                    <p class="para5">Sell on Amazon Business</p>
-                </a>
-                <a href="#">
-                    <p class="para5">Sell apps on Amazon</p>
-                </a>
-                <a href="#">
-                    <p class="para5">Become an Affiliate</p>
-                </a>
-                <a href="#">
-                    <p class="para5">Addvertise Your Products</p>
-                </a>
-                <a href="#">
-                    <p class="para5">Host an Amazon Hub</p>
-                </a>
-                <a href="#">
-                    <p class="para5">>See More Make Money with Us</p>
-                </a>
-            </section>
-            <section class="nav-col3">
-                <h3>Amazon Payment Products</h3>
-                <a href="#">
-                    <p class="para5 ">Amazon Business Card</p>
-                </a>
-                <a href="#">
-                    <p class="para5 ">Shop with Points</p>
-                </a>
-                <a href="#">
-                    <p class="para5 ">Reload Your Balance</p>
-                </a>
-                <a href="#">
-                    <p class="para5 ">Amazon Currency Converter</p>
-                </a>
-            </section>
-            <section class="nav-col4">
-                <h3>Let Us Help You</h3>
-                <a href="#">
-                    <p class="para5 ">Amazon and Covid-19</p>
-                </a>
-                <a href="#">
-                    <p class="para5 ">Your Account</p>
-                </a>
-                <a href="#">
-                    <p class="para5 ">Your Orders</p>
-                </a>
-                <a href="#">
-                    <p class="para5 ">Shipping Rates & Polices</p>
-                </a>
-                <a href="#">
-                    <p class="para5 ">Returns & Replacements</p>
-                </a>
-                <a href="#">
-                    <p class="para5 ">Manage Your Contact and Devices</p>
-                </a>
-                <a href="#">
-                    <p class="para5 ">Help</p>
-                </a>
-            </section>
-        </article>
-        <article class="nav-footer-line">
-            <a href="#">
-                <section class="logo2"></section>
-            </a>
-            <section class="r2">
-                <section class="lang">
-                    <i class="fa-solid fa-globe"></i>
-                    <h4>English</h4>
-                    <i class="fa-solid fa-caret-down"></i>
-                </section>
-                <section class="currency"></a>
-                    <a href="#">
-                        <h4>$ USD - U.S Dollar </h4>
-                    </a>
-                </section>
-                <section class="country">
-                    <a href="#">
-                        <section class="us-flag"></section>
-                    </a>
-                    <a href="#">
-                        <h4>United States</h4>
-                    </a>
-                </section>
-            </section>
-        </article>
-        <section class="reserves">
-            <p class="para6" style="color: white;">&copy 1996-2024, Amazon.com, Inc. or its affiliates</p>
-        </section>
-    </footer>
+
+    <script>
+        // Function to add two numbers
+        function Add(){
+            let number1 = Number(document.getElementById("num1").value);  // Convert to number
+            let number2 = Number(document.getElementById("num2").value);  // Convert to number
+            let result = number1 + number2; 
+            document.getElementById("content").innerHTML = `Result = ${result}`;  // Display result
+        }
+
+        // Function to subtract two numbers
+        function Sub(){
+            let number1 = Number(document.getElementById("num1").value);  // Convert to number
+            let number2 = Number(document.getElementById("num2").value);  // Convert to number
+            let result = number1 - number2; 
+            document.getElementById("content").innerHTML = `Result = ${result}`;  // Display result
+        }
+
+        // Function to multiply two numbers
+        function Mul(){
+            let number1 = Number(document.getElementById("num1").value);  // Convert to number
+            let number2 = Number(document.getElementById("num2").value);  // Convert to number
+            let result = number1 * number2; 
+            document.getElementById("content").innerHTML = `Result = ${result}`;  // Display result
+        }
+
+        // Function to divide two numbers
+        function Div(){
+            let number1 = Number(document.getElementById("num1").value);  // Convert to number
+            let number2 = Number(document.getElementById("num2").value);  // Convert to number
+            if (number2 === 0) {
+                document.getElementById("content").innerHTML = "Error: Division by zero is not allowed";  // Division by zero check
+            } else {
+                let result = number1 / number2; 
+                document.getElementById("content").innerHTML = `Result = ${result}`;  // Display result
+            }
+        }
+    </script>
 </body>
-
 </html>
-
-
-
-<!--as we want deliver to and location on different lines we will use seperate divs or section or any other block elements tag ---->
